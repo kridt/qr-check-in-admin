@@ -90,9 +90,27 @@ export default function LandingPage() {
             locationAddress: currentLocation?.locationAddress,
             time: new Date().toLocaleString(),
             locationId: currentLocation?.locationId,
+            locationName: currentLocation?.locationName,
           },
         })
-        .then((res) => console.log(res.data));
+        .then((res) => {
+          console.log(res);
+          if (res.status === 200) {
+            alert(
+              "Checked in " +
+                coworker.firstName +
+                " " +
+                coworker.lastName +
+                " at " +
+                currentLocation?.locationAddress
+            );
+          }
+          if (res.status === 202) {
+            alert(
+              `You have already checked ${checkId} at ${currentLocation?.locationAddress}`
+            );
+          }
+        });
     }
   }
 
