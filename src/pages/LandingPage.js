@@ -79,9 +79,9 @@ export default function LandingPage() {
           " at " +
           new Date().toLocaleString()
       ); */
-
+      //https://qr-check-in.onrender.com
       axios
-        .get("https://qr-check-in.onrender.com/api/start", {
+        .get("http://localhost:6969/api/start", {
           params: {
             checkId: checkId,
             firstName: coworker.firstName,
