@@ -81,7 +81,7 @@ export default function LandingPage() {
       ); */
 
       axios
-        .get("http://localhost:6969/api/start", {
+        .get("https://qr-check-in.onrender.com/api/start", {
           params: {
             checkId: checkId,
             firstName: coworker.firstName,
